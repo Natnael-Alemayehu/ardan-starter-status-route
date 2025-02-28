@@ -30,7 +30,6 @@ type Logger func(ctx context.Context, msg string, args ...any)
 type App struct {
 	log     Logger
 	mux     *http.ServeMux
-	otmux   http.Handler
 	mw      []MidFunc
 	origins []string
 }
