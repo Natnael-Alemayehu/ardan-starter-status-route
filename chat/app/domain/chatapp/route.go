@@ -14,7 +14,7 @@ type Config struct {
 func Routes(app *web.App, cfg Config) {
 	const version = "v1"
 
-	api := newApp()
+	api := newApp(cfg.Log)
 
-	app.HandlerFunc(http.MethodGet, version, "/test", api.test)
+	app.HandlerFunc(http.MethodGet, version, "/connect", api.connect)
 }

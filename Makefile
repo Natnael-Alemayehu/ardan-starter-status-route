@@ -10,6 +10,9 @@ chat-run:
 chat-test:
 	curl -i -X GET localhost:3000/v1/test
 
+chat-connect: 
+	go run chat/api/tooling/admin/main.go
+
 # ==============================================================================
 # Modules support
 
